@@ -1,0 +1,26 @@
+{
+    "easy":{
+        "name":"Easy",
+        "color":"#88ff88",
+        "enemySpawnPeriodMin":1.0,
+        "enemySpawnPeriodMax":3,
+        "enemySpawnAcceleration":0.995,
+        "enemyBossRate":0.05
+    },
+    "normal":{
+        "name":"Normal",
+        "color":"#ffff88",
+        "enemySpawnPeriodMin":0.7,
+        "enemySpawnPeriodMax":2.5,
+        "enemySpawnAcceleration":0.9925,
+        "enemyBossRate":0.1
+    },
+    "hard":{
+        "name":"Hard",
+        "color":"#ff8888",
+        "enemySpawnPeriodMin":0.6,
+        "enemySpawnPeriodMax":2,
+        "enemySpawnAcceleration":0.99,
+        "enemyBossRate":0.2
+    }
+}

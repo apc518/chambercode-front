@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Chamberlain Music - Flippr</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<meta charset="utf-8"/>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body onresize="positionHelpButton()">
+<div>
+	<h1>Flippr</h1>
+	<form action="#" id="userForm" onsubmit="handleInput(); return false;">
+	    <input type="text" id="notesinput" autocomplete="off" placeholder="notes to flip">
+	    <br><br>
+	    <input type="text" id="axisinput" autocomplete="off" maxlength="7" placeholder="axis">
+	    <br><br>
+	    <input type="submit" class="formsubmit" value="Flip!">
+	</form>
+	<p id="para"><br></p>
+	<span class="melharmlabel">Reverse Output</span>
+	<label class="switch">
+		<input type="checkbox" onclick="toggleRev()" autocomplete="off" checked>
+		<span class="slider round"></span>
+	</label>
+</div>
+<button type="button" id="helpbutton" class="helpbutton" onclick="showHelp(); return false;">help</button>
+<script src="index.js"></script>
+</body>
+</html>

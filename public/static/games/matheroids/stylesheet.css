@@ -1,0 +1,66 @@
+body{
+	background-color: #ffffff;
+	font-family:sans-serif;
+	letter-spacing: 0.5px;
+}
+div {
+	color:#000000;
+}
+h1{
+	color:#000000;
+	font-family:sans-serif;
+}
+.asteroid {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    z-index: 1;
+    background-image: url("assets/asteroid_square_grey_v1.png");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: asteroidAnimation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes asteroidAnimation {
+    0% {bottom: 10px;}
+    100% {bottom: -590px;}
+}
+
+
+.flex-container{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#stage{
+    width: 400px;
+    height: 600px;
+    position: relative;
+    border: 1px solid #8d8d8d;
+    margin: auto;
+    background-image: url("assets/earth_v1.jpg");
+}
+canvas {
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    display: block;
+}
+#top-layer { z-index: 5; }
+#mid-layer { z-index: 4; }
+body{
+    background-color: #1D1D21;
+    margin: 0px;
+}
+form {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
