@@ -80,7 +80,6 @@ const enemyBossRateMultiplier = 0.998; // this will only activate after the enem
 
 const serverURLBase = "http://localhost:5000"
 let leaderboardError = false;
-let submittingScore = false;
 let networkError = false;
 let authToken;
 
@@ -253,7 +252,7 @@ function setup() {
         })
       }).catch(e => console.error(e));
     }
-  }, 3 * 1000);
+  }, 30 * 1000);
 }
 
 function draw() {
@@ -472,8 +471,8 @@ function setupStartScreen(){
   helpBtn.textSize = 24;
   helpBtn.textFont = globalFont;
   helpBtn.onPress = () => {
-    if(sweetAlerting) return;
-    sweetAlerting = true;
+    if(sfxOn) menuClickSfx.play();
+    clickablesDisabled = true;
     Swal.fire({
       title: "How To Play",
       html: `
@@ -482,10 +481,10 @@ function setupStartScreen(){
       1 and 2, F and G, and X and C also work.
       `
     }).then(() => {
-      sweetAlerting = false;
+      clickablesDisabled = false;
     }).catch(e => {
       console.error(e);
-      sweetAlerting = false;
+      clickablesDisabled = false;
     })
   }
   helpBtn.onHover = () => {
@@ -523,10 +522,8 @@ function setupGameOverScreen(){
   submitScoreBtn.textSize = 24;
   submitScoreBtn.textFont = globalFont;
   submitScoreBtn.onPress = () => {
-    if(!submittingScore){
-      if(sfxOn) menuClickSfx.play();
-      submitHighScore();
-    }
+    if(sfxOn) menuClickSfx.play();
+    submitHighScore();
   }
   submitScoreBtn.onHover = () => {
     submitScoreBtn.color = "#ffc";
@@ -550,10 +547,8 @@ function setupGameOverScreen(){
   restartBtn.textSize = 24;
   restartBtn.textFont = globalFont;
   restartBtn.onPress = () => {
-    if(!submittingScore){
-      if(sfxOn) menuClickSfx.play();
-      resetLevel();
-    }
+    if(sfxOn) menuClickSfx.play();
+    resetLevel();
   }
   restartBtn.onHover = () => {
     restartBtn.color = "#ffc";
@@ -871,7 +866,7 @@ function fetchLeaderboard(){
 }
 
 function submitHighScore(){
-  submittingScore = true;
+  clickablesDisabled = true;
   Swal.fire({
     title: `Enter your name and submit your score of ${score}`,
     input: 'text',
@@ -905,15 +900,16 @@ function submitHighScore(){
     }
   }).then((res) => {
     if(res.isConfirmed){
+      clickablesDisabled = true;
       Swal.fire({
         title: 'Successfully submitted high score!'
       }).then(() => {
-        submittingScore = false;
+        clickablesDisabled = false;
         resetLevel();
       })
     }
     else{
-      submittingScore = false;
+      clickablesDisabled = false;
     }
   });
 }
@@ -1219,7 +1215,7 @@ function registerGame(difficulty, data){
     .catch(e => {
       networkError = true;
       console.log("Playing offline: will not be able to submit highscore.");
-      sweetAlerting = true;
+      clickablesDisabled = true;
       Swal.fire({
         title: "Playing in offline mode.\nYou will not be able to submit a high score.",
         imageUrl: "images/wifi-off.png",
@@ -1227,7 +1223,7 @@ function registerGame(difficulty, data){
         imageHeight: 96,
         backdrop: false,
       }).then(() => {
-        sweetAlerting = false;
+        clickablesDisabled = false;
         startGame(difficulty, data)
       })
     });
