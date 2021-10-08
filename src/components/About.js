@@ -13,13 +13,6 @@ export default function About(props){
             </Typography>
 
             <Typography variant="h5">
-                This site is a work in progress.
-            </Typography>
-            <Typography style={{paddingBottom: 20}} variant="h5">
-                The backend is not deployed yet, and this about page has not been designed.
-            </Typography>
-
-            <Typography variant="h5">
                 ChamberCode uses the MERN stack. MongoDB, Express, React, and Node.js.
             </Typography>
             <Typography variant="h5">
