@@ -78,7 +78,7 @@ const enemyHealthMax = 20;
 // chance that a boss DOESN'T spawn is multiplied by this every time a monster spawns
 const enemyBossRateMultiplier = 0.998; // this will only activate after the enemySpawnPeriod has reached its minimum.
 
-const serverURLBase = "http://localhost:5000"
+const serverURLBase = "https://chambercode-back.herokuapp.com";
 let leaderboardError = false;
 let networkError = false;
 let authToken;
