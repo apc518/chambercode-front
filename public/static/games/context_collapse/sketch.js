@@ -172,7 +172,14 @@ function preload(){
   for(let i = 0; i < 5; i++) bossFreezeImages.push(loadImage("images/enemy-boss-freeze" + i + ".png"));
 }
 
-function setup() {
+function loadSound(path, vol=1){
+  return new Howl({
+    src: [path],
+    volume: vol
+  });
+}
+
+function setup(){
   createCanvas(canvasWidth, canvasHeight);
 
   initAgnosticGlobalVars();
@@ -186,24 +193,19 @@ function setup() {
   freezeAbilities = new Group();
   hotbarItems = new Group();
   
-  twangSfx = loadSound("audio/arrow_shot_1.wav");
-  twangSfx.setVolume(0.2);
+  twangSfx = loadSound("audio/arrow_shot_1.wav", 0.2);
   hitSfx = loadSound("audio/hit_1.wav");
   iceClinkSfx = loadSound("audio/ice_clink_1.wav");
   iceBreakSfx = loadSound("audio/ice_break_1.wav");
-  monsterDeathSfx = loadSound("audio/monster_death_1.wav");
-  monsterDeathSfx.setVolume(0.5);
-  chainSfx = loadSound("audio/chain_rattle.wav");
-  chainSfx.setVolume(0.2);
+  monsterDeathSfx = loadSound("audio/monster_death_1.wav", 0.5);
+  chainSfx = loadSound("audio/chain_rattle.wav", 0.2);
   killallSfx = loadSound("audio/fire_impact_1.wav");
   killallEquipSfx = loadSound("audio/snow_punch_2.wav");
   freezeSfx = loadSound("audio/snow_punch_1.wav");
-  playerDamageSfx = loadSound("audio/heavy_sound_1.wav");
-  playerDamageSfx.setVolume(0.2);
+  playerDamageSfx = loadSound("audio/heavy_sound_1.wav", 0.2);
   playerDeathSfx = loadSound("audio/death_2.wav");
   healthPackSfx = loadSound("audio/health_bottle_3.wav");
-  menuClickSfx = loadSound("audio/ma-scissors-02.wav");
-  menuClickSfx.setVolume(0.5);
+  menuClickSfx = loadSound("audio/ma-scissors-02.wav", 0.5);
 
   $.getJSON("./difficulty.json", function(data){
     difficultyData = data;
@@ -255,7 +257,7 @@ function setup() {
   }, 30 * 1000);
 }
 
-function draw() {
+function draw(){
   background(backgroundImage);
   if(gameState === STARTING){
     cursor(ARROW, mouseX, mouseY);
@@ -917,20 +919,16 @@ function submitHighScore(){
 function toggleLegacySfx(){
   useLegacySfx = !useLegacySfx;
   if(useLegacySfx){
-    twangSfx = loadSound("audio/twang.wav");
-    twangSfx.setVolume(3);
+    twangSfx = loadSound("audio/twang.wav", 3);
     playerDamageSfx = loadSound("audio/ow.wav");
     playerDeathSfx = loadSound("audio/aww.wav");
     monsterDeathSfx = loadSound("audio/fwoo.wav");
   }
   else{
-    twangSfx = loadSound("audio/arrow_shot_1.wav");
-    twangSfx.setVolume(0.2);
-    playerDamageSfx = loadSound("audio/heavy_sound_1.wav");
-    playerDamageSfx.setVolume(0.2);
+    twangSfx = loadSound("audio/arrow_shot_1.wav", 0.2);
+    playerDamageSfx = loadSound("audio/heavy_sound_1.wav", 0.2);
     playerDeathSfx = loadSound("audio/death_2.wav");
-    monsterDeathSfx = loadSound("audio/monster_death_1.wav");
-    monsterDeathSfx.setVolume(0.5);
+    monsterDeathSfx = loadSound("audio/monster_death_1.wav", 0.5);
   }
 }
 
