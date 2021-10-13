@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => {
       display: "flex"
     },
     page: {
-      width: '100%',
       flexGrow: 1,
+      height: "100vh"
     }
   }
 });

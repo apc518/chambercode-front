@@ -44,8 +44,3 @@ img{
   float: left;
   z-index: 0;
 }
-
-iframe{
-  border: none;
-  position: absolute;
-}
