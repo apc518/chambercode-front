@@ -99,14 +99,14 @@ class SmoothText{
   draw(){
     push();
 
-    textSize(this.size);
+    textSize(min(this.size, fontSizeInBounds(this.content, windowWidth * 0.9, windowHeight * 0.9)));
     strokeWeight(textWeight);
     if(!this.doFill) noFill();
     else fill(this.red_func(), this.green_func(), this.blue_func(), 255 * this.textOpacity);
     if(!this.doStroke) noStroke();
     else stroke(this.red_func(), this.green_func(), this.blue_func(), 255 * this.textOpacity);
     textAlign(CENTER);
-    textFont("Trebuchet MS");
+    textFont(globalFont);
     text(this.content, this.textX, this.textY);
 
     let progress = 1 - Math.pow(2, 0 - (this.textFrame / 24));
@@ -137,17 +137,50 @@ function init(){
   })
 }
 
+// ripple constants
+const maxRippleInterval = 90;
+const globalFont = "Trebuchet MS";
+
 let drawBackground = true;
 
 // ripple variables
 let ripples = [];
 let prevRippleSpawn = 0; // the last frame when a ripple spawned
-let maxRippleInterval = 90;
 let rippling = true;
-
 let textWeight = 2;
-
 let texts = [];
+
+/** 
+ * @author Lartu // https://github.com/Lartu/p5.clickable/blob/master/library/p5.clickable.js
+ * get the bounding size of a string of text
+ */
+function getTextBounds(str, fontSize) {
+	let txt = document.createElement("span");
+	document.body.appendChild(txt);
+
+	txt.style.font = globalFont;
+	txt.style.fontSize = fontSize + "px";
+	// txt.style.height = 'auto';
+	// txt.style.width = 'auto';
+	// txt.style.position = 'absolute';
+	// txt.style.whiteSpace = 'no-wrap';
+	txt.innerHTML = str;
+
+	let width = ceil(txt.offsetWidth);
+	let height = ceil(txt.offsetHeight);
+	document.body.removeChild(txt);
+	return {width: width, height: height};
+}
+
+// find the maximum font size that fits in a given bounding box
+function fontSizeInBounds(str, boundX, boundY){
+  const initGuess = 20;
+  return min(
+    floor(initGuess * boundX / getTextBounds(str, initGuess).width),
+    floor(initGuess * boundY / getTextBounds(str, initGuess).height)
+  );
+
+}
 
 // takes X and Y and outputs total speed
 function speed(x, y){
@@ -246,7 +279,7 @@ function mouseWheel(e){
 }
 
 function draw(){
-  if(drawBackground) background('#1D1D21');
+  if(drawBackground) background('#1d1d21');
   if(rippling && drawBackground) drawCursor();
   spawnRipple();
   updateRipples();
