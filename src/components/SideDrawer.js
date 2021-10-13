@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
 
 import { Hidden, makeStyles } from '@material-ui/core';
@@ -42,15 +42,10 @@ const useStyles = makeStyles((theme) => {
   }
 });
 
-export default function TestDrawer(){
+export default function TestDrawer({mobileOpen, handleDrawerToggle}){
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
   
   const menuItems = [
     {
