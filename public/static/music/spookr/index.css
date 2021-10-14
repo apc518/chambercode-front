@@ -23,6 +23,15 @@ div{
 	margin: 32px;
 }
 
+.flex-container{
+	display: flex;
+	justify-content: center;
+}
+
+.buttonContainer{
+	padding-top: 10px;
+}
+
 button {
 	text-align: center;
 	position: relative;
@@ -30,9 +39,10 @@ button {
 	border-radius: 4px;
 	background-color: #404040;
 	color: white;
-	font-size: 42px;
-	height: 48px;
-	width:auto;
+	font-size: 28px;
+	height: auto;
+	padding: 10px;
+	margin: 5px;
 }
 button:focus{
 	background-color: #606060;
