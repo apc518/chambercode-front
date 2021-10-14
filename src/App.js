@@ -9,6 +9,8 @@ import AppList from './components/AppList';
 import MiniApp from './components/MiniApp'
 import About from './components/About';
 import Layout from './components/Layout';
+import AboutMe from './components/AboutMe';
+import AboutCC from './components/AboutCC';
 
 const theme = createTheme({
   typography:{
@@ -61,6 +63,13 @@ function App() {
             </Route>
             <Route exact path="/about">
               <About/>
+            </Route>
+
+            <Route exact path="/about/andy">
+              <AboutMe/>
+            </Route>
+            <Route exact path="/about/chambercode">
+              <AboutCC/>
             </Route>
           </Switch>
         </Layout>
