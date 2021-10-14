@@ -12,7 +12,7 @@ const useStyles = makeStyles(() =>
       border: '2px solid #00cfcf',
       transition: '0.2s',
       '&:hover': {
-        transform: 'scale(1.05) rotate(1.5deg)',
+        transform: 'scale(1.04) rotate(1.0deg)',
         border: '4px solid #fff'
       }
     },
