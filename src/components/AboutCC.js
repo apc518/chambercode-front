@@ -1,28 +1,56 @@
 import React from 'react';
 
-import Grid from '@material-ui/core/Grid';
-import {Card, CardMedia, Container, Hidden, Typography} from '@material-ui/core';
+import {Container, Hidden, Typography} from '@material-ui/core';
+import LogoGrid from './LogoGrid';
 
 const logos = [
     {
         id: 0,
-        path: "/assets/images/mongodb-icon.svg",
-        title: "mongodb logo"
+        src: "/assets/images/mongodb-icon.svg",
+        title: "mongodb logo",
+        href: "https://www.mongodb.com/"
     },
     {
         id: 1,
-        path: "/assets/images/expressjs-icon.svg",
-        title: "express js logo"
+        src: "/assets/images/expressjs-icon.svg",
+        title: "express js logo",
+        href: "https://expressjs.com/"
     },
     {
         id: 2,
-        path: "/assets/images/reactjs-icon.svg",
-        title: "react logo"
+        src: "/assets/images/reactjs-icon.svg",
+        title: "react js logo",
+        href: "https://reactjs.org/"
     },
     {
         id: 3,
-        path: "/assets/images/nodejs-icon.svg",
-        title: "node js logo"
+        src: "/assets/images/nodejs-icon.svg",
+        title: "node js logo",
+        href: "https://nodejs.org/"
+    },
+    {
+        id: 4,
+        src: "/assets/images/mui-icon.svg",
+        title: "Material UI logo",
+        href: "https://mui.com/"
+    },
+    {
+        id: 5,
+        src: "/assets/images/p5js-asterisk.svg",
+        title: "p5js logo",
+        href: "https://p5js.org/"
+    },
+    {
+        id: 6,
+        src: "/assets/images/swal2-icon.svg",
+        title: "SweetAlert2 logo",
+        href: "https://sweetalert2.github.io/"
+    },
+    {
+        id: 7,
+        src: "/assets/images/heroku-icon.svg",
+        title: "Heroku logo",
+        href: "https://www.heroku.com/"
     }
 ]
 
@@ -33,40 +61,26 @@ export default function AboutMe(){
                 <br/><br/>
             </Hidden>
 
-            <Typography variant="h3" gutterBottom>
+            <Typography variant="h3">
                 Welcome!
             </Typography>
+            <Typography variant="subtitle1" gutterbottom>Click any logo to visit that technology's website</Typography><br/>
 
-            <Typography variant="h5">
-                ChamberCode uses the MERN stack:
-            </Typography>
-            <br/>
-            <Grid container>
-                {logos.map(logo => (
-                <Grid item key={logo.id} xs={6} md={3}>        
-                    <Card
-                        style={{width: 100, background: "none"}}
-                        elevation={0}
-                    >
-                            <CardMedia
-                                style={{height: 100, width: 100}}
-                                image={logo.path}
-                                title="react logo"
-                            />
-                    </Card>
-                </Grid>
-                ))}
-            </Grid>
-            <br/>
-            <Typography variant="h5">
-                The main UI library used is <a href="https://mui.com/" target="_blank" rel="noreferrer">Material-UI</a>.
-            </Typography>
-            <Typography variant="h5">
-                There are several embedded pages, many of which use <a href="https://p5js.org/" target="_blank" rel="noreferrer">p5.js</a>.
-            </Typography>
+            <Typography variant="h5">ChamberCode is built with the MERN stack: MongoDB, Express, React, and Node</Typography><br/>
+
+            <LogoGrid logos={logos.slice(0,4)}/><br/>
+
             <Typography style={{paddingBottom: 20}} variant="h5">
-                I also employ <a href="https://sweetalert2.github.io/" target="_blank" rel="noreferrer">SweetAlert2</a> all over the site.
+                Some really <i>sweet</i> libraries in use: Material-UI, p5.js, and SweetAlert2
             </Typography>
+
+            <LogoGrid logos={logos.slice(4,7)}/><br/>
+
+            <Typography style={{paddingBottom: 20}} variant="h5">
+                Finally, the project is hosted (front and back) on Heroku!
+            </Typography>
+
+            <LogoGrid logos={logos.slice(7,8)}/>
         </Container>
     )
 }
