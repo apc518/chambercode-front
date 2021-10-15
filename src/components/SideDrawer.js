@@ -89,7 +89,12 @@ export default function TestDrawer({mobileOpen, handleDrawerToggle}){
           <ListItem 
           key={item.id}
           button
-          onClick={() => history.push(item.path)}
+          onClick={() => {
+            history.push(item.path);
+            if(mobileOpen){
+              handleDrawerToggle();
+            }
+          }}
           className={location.pathname === item.path ? classes.active : null}
           >
           <ListItemIcon>{item.icon}</ListItemIcon>
