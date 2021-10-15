@@ -9,7 +9,7 @@ export default function About(props){
             <Hidden smUp implementation="css">
                 <br/><br/>
             </Hidden>
-            <Typography variant="h2" align="center">
+            <Typography variant="h3" align="center">
                 <Link to="/about/andy">Andy</Link><br/>
                 <Link to="/about/chambercode">ChamberCode</Link>
             </Typography>

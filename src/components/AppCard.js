@@ -41,7 +41,7 @@ export default function AppCard({app}){
               className={classes.media}
               image={app.thumbnail}
               title={app.title}
-              onClick={(e) => {
+              onClick={() => {
                 history.push(app.path)
               }}
             />
