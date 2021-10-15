@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => {
       position: "fixed",
       left: 10,
       top: 10,
-      minWidth: 10
+      minWidth: 10,
+      zIndex: 2
     }
   }
 });
