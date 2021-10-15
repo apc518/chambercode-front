@@ -3,7 +3,7 @@ import React from 'react';
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Hidden } from '@material-ui/core';
 
 import '../App.css';
 import AppCard from './AppCard'
@@ -43,6 +43,9 @@ export default function AppList(props) {
 
   return (
     <Container className={classes.container}>
+      <Hidden smUp implementation="css">
+          <br/>
+      </Hidden>
       <Grid container spacing={6}>
         {apps.map(app => (
           <Grid item key={app.id} xs={12} md={6}>
