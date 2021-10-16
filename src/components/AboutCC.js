@@ -70,7 +70,7 @@ export default function AboutMe(){
             <Typography variant="h3">
                 Welcome!
             </Typography>
-            <Typography variant="subtitle1" gutterbottom>Click any logo to visit that technology's website</Typography><br/>
+            <Typography variant="subtitle1" gutterBottom>Click any logo to visit that technology's website</Typography><br/>
 
             <Typography variant="h5">ChamberCode is built with the MERN stack: MongoDB, Express, React, and Node</Typography><br/>
 
