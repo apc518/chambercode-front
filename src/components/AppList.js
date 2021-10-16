@@ -1,5 +1,6 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
+
+import useScreenType from 'react-screentype-hook';
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme) => {
 
 export default function AppList(props) {
   const classes = useStyles();
+  const screenType = useScreenType();
 
   let apps;
 
@@ -49,7 +51,7 @@ export default function AppList(props) {
       <Grid container spacing={6}>
         {apps.map(app => (
           <Grid item key={app.id} xs={12} md={6}>
-            <AppCard app={app} />
+            {!screenType.isMobile || app.mobileEnabled ? <AppCard app={app}/> : <></>}
           </Grid>
         ))}
       </Grid>

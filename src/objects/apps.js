@@ -7,6 +7,7 @@ export default function getApps(){
                 path: "/games/context_collapse",
                 staticPath: "/static/games/context_collapse",
                 thumbnail: "/assets/images/context_collapse_thumbnail.png",
+                mobileEnabled: false,
                 id: 0
             },
             {
@@ -15,6 +16,7 @@ export default function getApps(){
                 path: "/games/matheroids",
                 staticPath: "/static/games/matheroids",
                 thumbnail: "/assets/images/matheroids_thumbnail.png",
+                mobileEnabled: true,
                 id: 1
             }
         ],
@@ -25,6 +27,7 @@ export default function getApps(){
                 path: "/music/flippr",
                 staticPath: "/static/music/flippr",
                 thumbnail: "/assets/images/flippr_thumbnail.png",
+                mobileEnabled: true,
                 id: 0
             },
             {
@@ -33,6 +36,7 @@ export default function getApps(){
                 path: "/music/spookr",
                 staticPath: "/static/music/spookr",
                 thumbnail: "/assets/images/spookr_thumbnail.png",
+                mobileEnabled: true,
                 id: 1
             }
         ],
@@ -43,6 +47,7 @@ export default function getApps(){
                 path: "/math/latex-matrix",
                 staticPath: "/static/latex-matrix/",
                 thumbnail: "/assets/images/latex-matrix-thumbnail.png",
+                mobileEnabled: true,
                 id: 0
             }
         ],
@@ -53,6 +58,7 @@ export default function getApps(){
                 path: "/",
                 staticPath: "/static/home",
                 thumbnail: null,
+                mobileEnabled: true,
                 id: 0
             }
         ]
