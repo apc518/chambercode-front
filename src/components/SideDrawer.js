@@ -5,6 +5,7 @@ import { Hidden, makeStyles } from '@material-ui/core';
 
 import Avatar from '@material-ui/core/Avatar';
 import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -110,11 +111,12 @@ export default function TestDrawer({mobileOpen, handleDrawerToggle}){
 
   return (
     <>
-    <Hidden smUp implementation="css">
-      <Drawer
+    <Hidden mdUp implementation="css">
+      <SwipeableDrawer
         variant="temporary"
         anchor="left"
         open={mobileOpen}
+        onOpen={handleDrawerToggle}
         onClose={handleDrawerToggle}
         classes={{
           paper: classes.drawerPaper,
@@ -124,9 +126,9 @@ export default function TestDrawer({mobileOpen, handleDrawerToggle}){
         }}
       >
         {drawer}
-      </Drawer>
+      </SwipeableDrawer>
     </Hidden>
-    <Hidden xsDown implementation="css">
+    <Hidden smDown implementation="css">
       <Drawer
         className={classes.drawer}
         variant="permanent"

@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => {
 
 export default function Layout({children}){
   const classes = useStyles();
-  const [mobileOpen, setMobileOpen] = useState();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -39,7 +39,7 @@ export default function Layout({children}){
       {/* side drawer */}
       <SideDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle}/>
 
-      <Hidden smUp implementation="css">
+      <Hidden mdUp implementation="css">
         <Button
           variant="outlined"
           color="secondary"
