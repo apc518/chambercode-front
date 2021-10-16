@@ -33,7 +33,7 @@ export default function About(props){
 
     return (
         <Container style={{paddingTop: 20}}>
-            <Hidden smUp implementation="css">
+            <Hidden mdUp implementation="css">
                 <br/><br/>
             </Hidden>
             <Grid container spacing={6}>

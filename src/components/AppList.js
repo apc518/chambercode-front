@@ -43,7 +43,7 @@ export default function AppList(props) {
 
   return (
     <Container className={classes.container}>
-      <Hidden smUp implementation="css">
+      <Hidden mdUp implementation="css">
           <br/>
       </Hidden>
       <Grid container spacing={6}>

@@ -23,7 +23,7 @@ export default function MiniApp({url}){
 
     return (
         <>
-        <Hidden smUp implementation="css">
+        <Hidden mdUp implementation="css">
             {appid in appsThatNeedSpace ? <><br/><br/></> : <></>}
         </Hidden>
         <iframe
