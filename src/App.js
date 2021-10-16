@@ -42,21 +42,21 @@ function App() {
               <AppList category="music"/>
             </Route>
             <Route exact path="/music/:appid">
-              <MiniApp category="music"/>
+              <MiniApp />
             </Route>
 
             <Route exact path='/games'>
               <AppList category="games"/>
             </Route>
             <Route exact path="/games/:appid">
-              <MiniApp category="games" />
+              <MiniApp />
             </Route>
 
             <Route exact path="/math">
               <AppList category="math" />
             </Route>
             <Route exact path="/math/:appid">
-              <MiniApp category="math"/>
+              <MiniApp/>
             </Route>
             <Route exact path="/latex-matrix">
               <Redirect from="/latex-matrix" to="/math/latex-matrix" />
