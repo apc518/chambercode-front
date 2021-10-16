@@ -2,8 +2,6 @@ var notesInput = document.getElementById("notesinput");
 var axisInput = document.getElementById("axisinput");
 var para = document.getElementById("para");
 notesInput.focus();
-notesInput.style.width = 600 + "px";
-axisInput.style.width = 200 + "px";
 
 var noteToNum = {"B#":0, "C":0, "Dbb":0,"C#":1, "Db":1, "Bx":1, "D":2,"Cx":2,"Ebb":2, "D#":3, "Eb":3, "Fbb":3, "E":4, "Dx":4, "Fb":4, "E#":5, "F":5, "Gbb":5, "F#":6, "Gb":6, "Ex":6, "G":7, "Fx":7, "Abb":7, "G#":8, "Ab":8, "A":9, "Gx":9, "Bbb":9, "A#":10, "Bb":10, "Cbb":10, "B":11, "Cb":11, "Ax":11};
 var numToNote = {0:"C", 1:"Db", 2:"D", 3:"Eb", 4:"E", 5:"F", 6:"Gb", 7:"G", 8:"Ab", 9:"A", 10:"Bb", 11:"B"};

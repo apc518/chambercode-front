@@ -36,12 +36,21 @@ input:hover{
 input[disabled]{
 	pointer-events: none;
 }
+
+#notesinput {
+	width: clamp(100px, 600px, 90vw);
+}
+#axisinput {
+	width: clamp(100px, 200px, 90vw);
+}
+
 button:focus{
 	background-color: #606060;
 }
 button:hover{
 	background-color: #606060;
 }
+
 a {
 	font-size: 42px;
 	position: inherit;
@@ -60,6 +69,7 @@ a:hover {
 a:active {
 	color: blue;
 }
+
 .helpLink{
 	color: blue;
 }
@@ -75,11 +85,13 @@ a:active {
 .helpLink:active {
 	color: darkblue;
 }
+
 .settingsInput {
 	font-size: 16px;
 	height: 20px;
 	width: 80px;
 }
+
 .helpbutton{
 	position:fixed;
 	font-size: 32px;
@@ -99,6 +111,7 @@ a:active {
   color: white;
   opacity: 0.5; /* Firefox */
 }
+
 .switch {
   position: relative;
   vertical-align: middle;
