@@ -16,7 +16,7 @@ Context Collapse has a live leaderboard that you can submit your highscores to. 
 ### Matheroids 🌠
 Matheroids is a math game was developed as part of a school project in early 2020. It was made in collaboration with Jack Bodine, Kate Schuh, Lucas Leary, and Rachel Johnson of the University of Puget Sound
 
-### LaTeX Matrix Generator
+### LaTeX Matrix Generator ✒️
 A simple but helpful tool for getting the LaTeX code for a given matrix. Taking linear algebra I found this to be tedious, so I made a slick UI with a live preview powered by MathJax, with input controls almost identical to Google Sheets/Excel.
 
 ## Technologies 
