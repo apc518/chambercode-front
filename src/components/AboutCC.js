@@ -60,10 +60,12 @@ const logos = [
     }
 ]
 
+const iconSize = 125;
+
 export default function AboutMe(){
     return (
         <Container style={{paddingTop: 20}}>
-            <Hidden smUp implementation="css">
+            <Hidden mdUp implementation="css">
                 <br/><br/>
             </Hidden>
 
@@ -74,19 +76,19 @@ export default function AboutMe(){
 
             <Typography variant="h5">ChamberCode is built with the MERN stack: MongoDB, Express, React, and Node</Typography><br/>
 
-            <LogoGrid logos={logos.slice(0,4)}/><br/>
+            <LogoGrid logos={logos.slice(0,4)} itemSize={iconSize}/><br/>
 
             <Typography style={{paddingBottom: 20}} variant="h5">
                 Some really <i>sweet</i> libraries in use: Material-UI, p5.js, and SweetAlert2
             </Typography>
 
-            <LogoGrid logos={logos.slice(4,7)}/><br/>
+            <LogoGrid logos={logos.slice(4,7)} itemSize={iconSize}/><br/>
 
             <Typography style={{paddingBottom: 20}} variant="h5">
                 The project is hosted (front and back) on Heroku, and uses git/GitHub for version control. (click the github icon to see the repo for this site)
             </Typography>
 
-            <LogoGrid logos={logos.slice(7,9)}/>
+            <LogoGrid logos={logos.slice(7,9)} itemSize={iconSize}/>
         </Container>
     )
 }
