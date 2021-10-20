@@ -37,14 +37,16 @@ const projects = [
 ]
 
 export default function AboutMe(){
-    const [subs, setSubs] = useState("0");
+    const [subs, setSubs] = useState("...");
     
     useEffect(() => {
         const ytSubsUrl = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com/youtubestats/andy/subscribers" : "http://localhost:5000/youtubestats/andy/subscribers"
         fetch(ytSubsUrl)
             .then((res) => {
                 res.json().then(data => {
-                    setSubs(data.items[0].statistics.subscriberCount)
+                    let subCount = data.items[0].statistics.subscriberCount;
+                    let subCountRounded = 100 * Math.round(parseInt(subCount) / 100)
+                    setSubs(subCountRounded);
                 })
             })
             .catch(e => console.error(e));
