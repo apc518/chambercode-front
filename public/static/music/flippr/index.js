@@ -11,18 +11,6 @@ var easterEggs = {"hello":"hi","how are you":"very well, thanks","how are you?":
 
 var doReverse = true;
 
-
-// help button stuff
-
-var helpButton = document.getElementById("helpbutton");
-
-positionHelpButton();
-
-function positionHelpButton(){
-    helpButton.style.top = (window.innerHeight - 48 - 15) + "px";
-    helpbutton.style.left = (window.innerWidth / 2 - 50) + "px";
-}
-
 function toggleRev(){
     if(doReverse){
         doReverse = false;
@@ -30,7 +18,7 @@ function toggleRev(){
     else{
         doReverse = true;
     }
-    para.innerHTML = para.innerHTML.split(" ").reverse("").join(" ");
+    para.innerText = para.innerText.split(" ").reverse("").join(" ");
     return false;
 }
 
@@ -39,19 +27,19 @@ function handleInput(){
         return false;
     }
     if(notesInput.value.toLowerCase() in easterEggs){
-        para.innerHTML = easterEggs[notesInput.value.toLowerCase()];
+        para.innerText = easterEggs[notesInput.value.toLowerCase()];
         return false;
     }
     if(axisInput.value === "" && checkNotes(notesInput.value) === "valid"){
         if(doReverse){
-            para.innerHTML = parseInput(notesInput.value).reverse().join(" ");
+            para.innerText = parseInput(notesInput.value).reverse().join(" ");
         }
         else{
-            para.innerHTML = parseInput(notesInput.value).join(" ");
+            para.innerText = parseInput(notesInput.value).join(" ");
         }
     }
     else{
-        para.innerHTML = flippedScale(notesInput.value, axisInput.value);
+        para.innerText = flippedScale(notesInput.value, axisInput.value);
     }
     return false;
 }

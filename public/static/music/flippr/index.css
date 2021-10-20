@@ -93,10 +93,12 @@ a:active {
 }
 
 .helpbutton{
-	position:fixed;
+	position: fixed;
 	font-size: 32px;
 	height: 48px;
 	width: 100px;
+	bottom: 10px;
+	left: calc(50vw - 48px);
 }
 .formsubmit{
 	font-size: 36px;
