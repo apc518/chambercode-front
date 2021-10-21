@@ -8,6 +8,7 @@ import TechProjects from './TechProjects';
 const youtubeLink = "https://www.youtube.com/andychamberlainmusic";
 const realisrVideo = "https://www.youtube.com/watch?v=2b8rnIcBCTc";
 const githubLink = "https://github.com/apc518";
+const urlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com/" : "http://localhost:5000/";
 
 const projects = [
     {
@@ -40,14 +41,14 @@ export default function AboutMe(){
     const [subs, setSubs] = useState("...");
     
     useEffect(() => {
-        const ytSubsUrl = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com/youtubestats/andy/subscribers" : "http://localhost:5000/youtubestats/andy/subscribers"
-        fetch(ytSubsUrl)
+        fetch(`${urlBase}youtubestats/andy/subscribers`)
             .then((res) => {
                 res.json().then(data => {
                     let subCount = data.items[0].statistics.subscriberCount;
                     let subCountRounded = 100 * Math.round(parseInt(subCount) / 100)
                     setSubs(subCountRounded);
                 })
+                .catch(e => console.error(e));
             })
             .catch(e => console.error(e));
     }, [])
