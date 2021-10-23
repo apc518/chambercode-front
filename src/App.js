@@ -4,7 +4,6 @@ import "./App.css";
 
 import { createTheme, ThemeProvider} from '@material-ui/core';
 
-import Home from './components/Home';
 import AppList from './components/AppList';
 import MiniApp from './components/MiniApp'
 import About from './components/About';
@@ -35,28 +34,28 @@ function App() {
         <Layout>
           <Switch>
             <Route exact path="/">
-              <Home/>
+              <MiniApp category={"home"} name={"home"}/>
             </Route>
             
             <Route exact path="/music">
               <AppList category="music"/>
             </Route>
             <Route exact path="/music/:appid">
-              <MiniApp />
+              <MiniApp category="music" />
             </Route>
 
             <Route exact path='/games'>
               <AppList category="games"/>
             </Route>
             <Route exact path="/games/:appid">
-              <MiniApp />
+              <MiniApp category="games" />
             </Route>
 
             <Route exact path="/math">
               <AppList category="math" />
             </Route>
             <Route exact path="/math/:appid">
-              <MiniApp/>
+              <MiniApp category={"math"}/>
             </Route>
             <Route exact path="/latex-matrix">
               <Redirect from="/latex-matrix" to="/math/latex-matrix" />
