@@ -2,7 +2,7 @@
 
 Source for the front end of my website [chambercode](https://chambercode.com)
 
-## Content
+## Featured Apps
 ### Flippr 🎹
 A simple, clean web-app version of the first program I ever wrote, used for music theory tinkering.
 
