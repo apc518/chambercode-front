@@ -7,7 +7,8 @@ import { apps } from '../objects/apps';
 
 const appsThatNeedSpace = {
     "matheroids": 0,
-    "latex-matrix": 1
+    "latex-matrix": 1,
+    "context-collapse": 2
 }
 
 export default function MiniApp({ category, name }){
