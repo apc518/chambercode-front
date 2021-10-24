@@ -97,7 +97,7 @@ export default function AboutMe(){
             <LogoGrid logos={logos.slice(7,9)} itemSize={iconSize}/><br/>
             
             <Typography style={{paddingBottom: 20}} variant="h5">
-                I use git/GitHub for version control. You can click the GitHub icon to visit the repository for this site!
+                I use git/GitHub for version control. You can click the GitHub icon to visit the repo for this site!
             </Typography>
 
             <LogoGrid logos={logos.slice(9,10)} itemSize={iconSize} />
