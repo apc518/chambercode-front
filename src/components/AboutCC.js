@@ -54,6 +54,12 @@ const logos = [
     },
     {
         id: 8,
+        src: "/assets/images/netlify-icon.svg",
+        title: "Netlify",
+        href: "https://www.netlify.com/"
+    },
+    {
+        id: 9,
         src: "/assets/images/github-icon.svg",
         title: "GitHub",
         href: "https://github.com/apc518/chambercode-front/"
@@ -85,10 +91,17 @@ export default function AboutMe(){
             <LogoGrid logos={logos.slice(4,7)} itemSize={iconSize}/><br/>
 
             <Typography style={{paddingBottom: 20}} variant="h5">
-                The project is hosted (front and back) on Heroku, and uses git/GitHub for version control. (click the github icon to see the repo for this site)
+                ChamberCode itself is hosted (front and back) on Heroku, and most of the static sites within are hosted on Netlify.
             </Typography>
 
-            <LogoGrid logos={logos.slice(7,9)} itemSize={iconSize}/>
+            <LogoGrid logos={logos.slice(7,9)} itemSize={iconSize}/><br/>
+            
+            <Typography style={{paddingBottom: 20}} variant="h5">
+                I use git/GitHub for version control. (click the github icon to see the repo for this site)
+            </Typography>
+
+            <LogoGrid logos={logos.slice(9,10)} itemSize={iconSize} />
+
         </Container>
     )
 }
