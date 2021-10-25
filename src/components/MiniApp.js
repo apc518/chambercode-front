@@ -24,7 +24,7 @@ export default function MiniApp({ category, name }){
             flexDirection: "column"
         }}>
             <Hidden mdUp implementation="css">
-                {app.needsForeheadMdDown ? <><br/><br/></> : <></>}
+                {app.needsForeheadMdDown ? <><div style={{ minHeight: "50px" }}></div></> : <></>}
             </Hidden>
             <iframe
                 ref={miniApp}
