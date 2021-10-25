@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import {Container, Typography, Hidden} from '@material-ui/core';
+import {Container, Typography, Hidden, CircularProgress} from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import TechProjects from './TechProjects';
@@ -11,9 +11,8 @@ const realisrVideo = "https://www.youtube.com/watch?v=2b8rnIcBCTc";
 const githubLink = "https://github.com/apc518";
 const urlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com/" : "http://localhost:5000/";
 
-
 export default function AboutMe(){
-    const [subs, setSubs] = useState("...");
+    const [subs, setSubs] = useState(<CircularProgress size="1.2rem"/>);
     
     useEffect(() => {
         fetch(`${urlBase}youtubestats/andy/subscribers`)
