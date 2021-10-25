@@ -4,38 +4,13 @@ import {Container, Typography, Hidden} from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import TechProjects from './TechProjects';
+import {projects} from "../objects/projects";
 
 const youtubeLink = "https://www.youtube.com/andychamberlainmusic";
 const realisrVideo = "https://www.youtube.com/watch?v=2b8rnIcBCTc";
 const githubLink = "https://github.com/apc518";
 const urlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com/" : "http://localhost:5000/";
 
-const projects = [
-    {
-        id: 0,
-        tech: "Python",
-        techThumbnailSrc: "/assets/images/python-icon.svg",
-        title: "Mass Aliaser",
-        description: "A python script with a tkinter GUI that allows you to very efficiently speed up a folder of wav files without any anti-aliasing.",
-        href: "https://github.com/apc518/mass-aliasing/"
-    },
-    {
-        id: 1,
-        tech: "C#",
-        techThumbnailSrc: "/assets/images/c-sharp-icon.svg",
-        title: "Chess Engine",
-        description: "A C# chess engine. I used a library for move generation and the rules of the game, but I coded the negamax algorithm, alpha-beta pruning, and multi-threading.",
-        href: null // coming soon
-    },
-    {
-        id: 2,
-        tech: "JavaScript",
-        techThumbnailSrc: "/assets/images/javascript-icon.svg",
-        title: "ChamberCode",
-        description: "This site! And many embedded apps such as Flippr, Spookr, and Context Collapse.",
-        href: "https://github.com/apc518/chambercode-front/"
-    }
-]
 
 export default function AboutMe(){
     const [subs, setSubs] = useState("...");

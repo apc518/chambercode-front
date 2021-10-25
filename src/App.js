@@ -11,6 +11,8 @@ import Layout from './components/Layout';
 import AboutMe from './components/AboutMe';
 import AboutCC from './components/AboutCC';
 
+import {apps} from './objects/apps';
+
 const theme = createTheme({
   typography:{
     fontFamily: "Trebuchet MS"
@@ -34,7 +36,10 @@ function App() {
         <Layout>
           <Switch>
             <Route exact path="/">
-              <MiniApp category={"home"} name={"home"}/>
+              <MiniApp category="home" name="home"/>
+            </Route>
+            <Route exact path="/latex-matrix">
+              <Redirect from="/latex-matrix" to="/math/latex-matrix" />
             </Route>
             
             <Route exact path="/music">
@@ -57,9 +62,7 @@ function App() {
             <Route exact path="/math/:appid">
               <MiniApp category={"math"}/>
             </Route>
-            <Route exact path="/latex-matrix">
-              <Redirect from="/latex-matrix" to="/math/latex-matrix" />
-            </Route>
+            
             <Route exact path="/about">
               <About/>
             </Route>

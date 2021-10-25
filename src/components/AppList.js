@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => {
   }
 })
 
-export default function AppList(props) {
+export default function AppList({category}) {
   const classes = useStyles();
   const screenType = useScreenType();
 
@@ -32,7 +32,7 @@ export default function AppList(props) {
           <br/>
       </Hidden>
       <Grid container spacing={6}>
-        {apps[props.category].map(app => (
+        {apps[category].map(app => (
           <Grid item key={app.id} xs={12} md={6}>
             {!screenType.isMobile || app.mobileEnabled ? <AppCard app={app}/> : <></>}
           </Grid>
