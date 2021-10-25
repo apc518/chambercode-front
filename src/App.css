@@ -27,20 +27,3 @@ a{
 a:hover{
   color: white;
 }
-
-img{
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.noheight{
-  line-height: 0px;
-  font-size: 5px;
-}
-
-.floatingLink{
-  float: left;
-  z-index: 0;
-}
