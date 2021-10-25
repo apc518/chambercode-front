@@ -18,7 +18,11 @@ export default function MiniApp({ category, name }){
     const app = apps[category].filter(a => a.name === appid ? appid : name)[0];
 
     return (
-        <>
+        <div style={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column"
+        }}>
             <Hidden mdUp implementation="css">
                 {app.needsForeheadMdDown ? <><br/><br/></> : <></>}
             </Hidden>
@@ -29,6 +33,6 @@ export default function MiniApp({ category, name }){
                 sandbox="allow-modals allow-forms allow-top-navigation allow-same-origin allow-scripts allow-pointer-lock allow-orientation-lock allow-popups allow-presentation"
                 src={app.url}
             />
-        </>
+        </div>
     )
 }
