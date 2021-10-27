@@ -5,6 +5,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 import TechProjects from './TechProjects';
 import {projects} from "../objects/projects";
+import ContactForm from './ContactForm';
 
 const youtubeLink = "https://www.youtube.com/andychamberlainmusic";
 const realisrVideo = "https://www.youtube.com/watch?v=2b8rnIcBCTc";
@@ -54,6 +55,14 @@ export default function AboutMe(){
 
             <br/>
             <TechProjects projects={projects}/>
+            
+            <hr style={{
+                border: "1px solid #888",
+                minWidth: "100%",
+                marginTop: 40
+            }}/>
+
+            <ContactForm />
 
             <footer style={{marginTop: "auto", padding:"2em"}}>
             <Typography align="center" variant="h5" style={{lineHeight: 1.2}}>
