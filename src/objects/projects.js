@@ -3,9 +3,9 @@ export const projects = [
         id: 0,
         tech: "Python",
         techThumbnailSrc: "/assets/images/python-icon.svg",
-        title: "Mass Aliaser",
-        description: "A python script with a tkinter GUI that allows you to very efficiently speed up a folder of wav files without any anti-aliasing.",
-        href: "https://github.com/apc518/mass-aliasing"
+        title: "Profanity Detector",
+        description: "A surprisingly capable profanity detector written in pure python. It outperforms most profanity detectors I've seen in production.",
+        href: "https://github.com/apc518/pyprofanity"
     },
     {
         id: 1,
