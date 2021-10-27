@@ -14,6 +14,8 @@ import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
 
+const urlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com" : "http://localhost:5000";
+
 const useStyles = makeStyles({
   field: {
     marginTop: 20,
@@ -49,20 +51,77 @@ export default function ContactForm() {
   const classes = useStyles();
 
   const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const [messageBody, setMessageBody] = useState('');
 
-  const [titleError, setTitleError] = useState(false);
-  const [detailsError, setDetailsError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [subjectError, setSubjectError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+
+  const fields = [
+    {
+      name: "Your Email",
+      rows: 1,
+      func: setEmail,
+      error: emailError
+    },
+    {
+      name: "Subject",
+      rows: 1,
+      func: setSubject,
+      error: subjectError
+    },
+    {
+      name: "Message",
+      rows: 6,
+      func: setMessageBody,
+      error: messageError
+    }
+  ]
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(`email: ${email}, body: ${messageBody}`);
+    console.log(`email: ${email}, subject: ${subject}, body: ${messageBody}`);
     
-    setTitleError(!validate(email));
-    setDetailsError(!messageBody);
+    setEmailError(!validate(email));
+    setSubjectError(!subject);
+    setMessageError(!messageBody);
 
-    if(email && messageBody) {
+    if(validate(email) && subject && messageBody){
+      fetch(`${urlBase}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          subject: subject,
+          message: messageBody
+        })
+      })
+      .then(res => {
+        if(res.ok){
+          MySwal.fire({
+            title: "Success!",
+            text: "If your response wasn't spam, expect a response within 3 days.",
+            icon: "success"
+          });
+        }
+        else{
+          throw new Error();
+        }
+      })
+      .catch(e => {
+        MySwal.fire({
+          title: "Error :(",
+          text: "Likely you inputted an invalid email address. Double-check that your email is spelled correctly.",
+          icon: "error"
+        })
+      });
+    }
+
+    if(validate(email) && subject && messageBody) {
       MySwal.fire({
         title: "Success!",
         text: "If your response wasn't spam, expect a response within 3 days.",
@@ -81,41 +140,26 @@ export default function ContactForm() {
         align="left"
         className={classes.pageTitle}
       >
-        Contact
+        Contact Me
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <CssTextField
-          onChange={(e) => setEmail(e.target.value)}
-          variant="outlined"
-          label="Email"
-          color="secondary"
-          fullWidth
-          required // does not change validation, only adds asterisk to field label
-          InputProps={{
-            className: classes.text
-          }}
-          className={classes.field}
-          error={titleError}
-        />
-        <CssTextField
-          onChange={(e) => setMessageBody(e.target.value)}
-          variant="outlined"
-          label="Message"
-          color="secondary"
-          fullWidth
-          required // does not change validation, only adds asterisk to field label
-          InputProps={{
-            className: classes.text
-          }}
-          className={classes.field}
-          multiline
-          rows={4}
-          error={detailsError}
-        />
+        {fields.map(field=>(
+          <CssTextField
+            onChange={e => field.func(e.target.value)}
+            variant="outlined"
+            label={field.name}
+            color="secondary"
+            fullWidth
+            required // does not affect validation, only adds asterisk to field label
+            InputProps={{ className: classes.text }}
+            className={classes.field}
+            error={field.error}
+            multiline={field.rows > 1 ? true : false}
+            rows={field.rows}
+          />
+        ))}
         
-        <br/>
-
         <Button
           type="submit"
           variant="contained"
