@@ -11,8 +11,6 @@ import Layout from './components/Layout';
 import AboutMe from './components/AboutMe';
 import AboutCC from './components/AboutCC';
 
-import {apps} from './objects/apps';
-
 const theme = createTheme({
   typography:{
     fontFamily: "Trebuchet MS"
