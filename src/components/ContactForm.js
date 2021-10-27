@@ -60,18 +60,21 @@ export default function ContactForm() {
 
   const fields = [
     {
+      id: 0,
       name: "Your Email",
       rows: 1,
       func: setEmail,
       error: emailError
     },
     {
+      id: 1,
       name: "Subject",
       rows: 1,
       func: setSubject,
       error: subjectError
     },
     {
+      id: 2,
       name: "Message",
       rows: 6,
       func: setMessageBody,
@@ -157,6 +160,7 @@ export default function ContactForm() {
             error={field.error}
             multiline={field.rows > 1 ? true : false}
             rows={field.rows}
+            key={field.id}
           />
         ))}
         
