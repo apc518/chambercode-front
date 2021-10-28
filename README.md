@@ -22,3 +22,10 @@ A simple but helpful tool for getting the LaTeX code for a given matrix. Taking 
 ## Technologies 
 ChamberCode is a full-stack many-page website built on the MERN stack: MongoDB, Express, React, and Node.
 I use several libraries in addition to MERN such as SweetAlert2, Material-UI and p5.js.
+
+
+## Special Thanks
+
+[The Net Ninja](https://netninja.dev/)'s [Material-UI Tutorial Series](https://www.youtube.com/watch?v=0KEpWHtG10M&list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58) was the starting point for the sites UI. It also has a companion [github](https://github.com/iamshaunjp/material-ui-tut) with branches for each lesson 😌
+
+[JavaScript Mastery](https://javascriptmastery.eo.page/)'s [MERN Tutorial](https://www.youtube.com/watch?v=ngc9gnGgUdA) is where the project started in the first place. At that time, I didn't even have a porfolio/app-hub in mind, I just wanted to learn React. This one also has a companion [github](https://github.com/adrianhajdin/project_mern_memories)
