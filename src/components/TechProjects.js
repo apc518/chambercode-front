@@ -25,7 +25,8 @@ export default function TechProjects({projects}){
                         style={{
                             background: project.id % 2 === 0 ? "#043" : "#034",
                             color: "white",
-                            width: 300
+                            width: 300,
+                            marginTop: 20
                         }}
                     >
                         <CardHeader title={project.title}>

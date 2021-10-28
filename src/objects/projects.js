@@ -17,6 +17,14 @@ export const projects = [
     },
     {
         id: 2,
+        tech: "C",
+        techThumbnailSrc: "/assets/images/c-icon.svg",
+        title: "UPS Shell",
+        description: "A POSIX-style shell written in C, themed for my university, the University of Puget Sound",
+        href: "https://github.com/apc518/ups-shell"
+    },
+    {
+        id: 3,
         tech: "JavaScript",
         techThumbnailSrc: "/assets/images/javascript-icon.svg",
         title: "ChamberCode",

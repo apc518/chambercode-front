@@ -53,7 +53,6 @@ export default function AboutMe(){
                 Below are several programming languages in which I am proficient. Click any of them to go to a project of mine that uses the language!
             </Typography>
 
-            <br/>
             <TechProjects projects={projects}/>
             
             <hr style={{
