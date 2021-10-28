@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import { miniAppStyles } from '../objects/styles';
 import { apps } from '../objects/apps';
+import NotFound from './NotFound';
 
 export default function MiniApp({ category, name }){
     const {appid} = useParams();
@@ -16,6 +17,12 @@ export default function MiniApp({ category, name }){
     }, []);
 
     const app = apps[category].filter(a => a.name === appid ? appid : name)[0];
+
+    if(!app){
+        return (
+            <NotFound/>
+        )
+    }
 
     return (
         <div style={{
