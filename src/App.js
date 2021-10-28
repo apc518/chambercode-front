@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import "./App.css";
 
 import { createTheme, ThemeProvider} from '@material-ui/core';
@@ -10,6 +10,7 @@ import About from './components/About';
 import Layout from './components/Layout';
 import AboutMe from './components/AboutMe';
 import AboutCC from './components/AboutCC';
+import NotFound from './components/NotFound';
 
 const theme = createTheme({
   typography:{
@@ -30,7 +31,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <BrowserRouter>
         <Layout>
           <Switch>
             <Route exact path="/">
@@ -71,9 +72,14 @@ function App() {
             <Route exact path="/about/chambercode">
               <AboutCC/>
             </Route>
+
+            {/* 404 */}
+            <Route path="*">
+              <NotFound/>
+            </Route>
           </Switch>
         </Layout>
-      </Router>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
