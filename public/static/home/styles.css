@@ -3,3 +3,51 @@ body{
     margin: 0;
     overflow: hidden;
 }
+
+/* #title{
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 120px;
+    color: #ddd;
+    text-align: center;
+    min-width: 100vw;
+
+    animation-name: titleAnim;
+    animation-duration: 7s;
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes titleAnim {
+    from {
+        top: -2em;
+        left: -50vw;
+    }
+    to {
+        top: calc(50vh - 1em);
+        left: 0vw;
+    }
+}
+
+#author{
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 48px;
+    color: #ddd;
+    text-align: center;
+    min-width: 100vw;
+
+    animation-name: authorAnim;
+    animation-duration: 7s;
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes authorAnim {
+    from {
+        top: calc(100vh + 1em);
+        left: calc(100vw + 100px);
+    }
+    to {
+        top: calc(50vh + 0.5em);
+        left: 0vw;
+    }
+} */
