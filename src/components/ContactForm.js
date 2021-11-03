@@ -134,7 +134,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Container>
+    <Container maxWidth="md">
       <Typography
         variant="h5"
         color="textPrimary"
@@ -164,15 +164,19 @@ export default function ContactForm() {
           />
         ))}
         
-        <Button
-          type="submit"
-          variant="contained"
-          color="secondary"
-          disableElevation
-          endIcon={<SendIcon/>}
-        >
-          Send
-        </Button>
+        <div style={{
+          textAlign: "right",
+        }}>
+          <Button
+            type="submit"
+            variant="contained"
+            color="secondary"
+            disableElevation
+            endIcon={<SendIcon/>}
+          >
+            Send
+          </Button>
+        </div>
       </form>
     </Container>
   )
