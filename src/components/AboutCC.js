@@ -4,6 +4,7 @@ import {Container, Hidden, Typography} from '@material-ui/core';
 import LogoGrid from './LogoGrid';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
+import InfoIcon from '@material-ui/icons/Info';
 import {logos} from '../objects/logos';
 
 const iconSize = 125;
@@ -42,7 +43,15 @@ export default function AboutMe(){
                 border: "1px solid #888",
                 minWidth: "100%",
             }}/>
-            <Typography variant="subtitle2" gutterBottom>Click any logo to visit that technology's website</Typography><br/>
+            <Typography variant="subtitle2" gutterBottom>
+                <InfoIcon
+                    style={{
+                        fontSize: 18,
+                        display: "inline-flex",
+                        verticalAlign: "text-bottom"
+                    }}
+                /> Click any logo to visit that technology's website
+            </Typography><br/>
             
             <Typography variant="h5">Main tech stack</Typography><br/>
 
@@ -61,7 +70,7 @@ export default function AboutMe(){
             <LogoGrid logos={logos.slice(7,9)} itemSize={iconSize}/><br/>
             
             <Typography style={{paddingBottom: 20}} variant="h5">
-                I use Git and GitHub for version control.
+                Version control
             </Typography>
 
             <LogoGrid logos={logos.slice(9,11)} itemSize={iconSize} />
