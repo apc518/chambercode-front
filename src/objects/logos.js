@@ -55,8 +55,14 @@ export const logos = [
     },
     {
         id: 9,
+        src: "/assets/images/git-icon.svg",
+        title: "Git",
+        href: "https://git-scm.com/"
+    },
+    {
+        id: 10,
         src: "/assets/images/github-icon.svg",
         title: "GitHub",
-        href: "https://github.com/apc518/chambercode-front/"
+        href: "https://github.com/"
     }
 ]
