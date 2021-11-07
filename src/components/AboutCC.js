@@ -19,7 +19,7 @@ export default function AboutMe(){
 
             <Typography variant="h3">
                 Welcome!
-            </Typography><br/>
+            </Typography>
             <hr style={{
                 border: "1px solid #888",
                 minWidth: "100%",
