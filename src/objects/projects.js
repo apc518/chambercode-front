@@ -9,6 +9,14 @@ export const projects = [
     },
     {
         id: 1,
+        tech: "Javascript",
+        techThumbnailSrc: "/assets/images/javascript-icon.svg",
+        title: "ChamberCode",
+        description: "This site! And many embedded apps such as Flippr, Spookr, and Context Collapse.",
+        href: "https://github.com/apc518/chambercode-front"
+    },
+    {
+        id: 2,
         tech: "C#",
         techThumbnailSrc: "/assets/images/c-sharp-icon.svg",
         title: "Chess Engine",
@@ -16,7 +24,7 @@ export const projects = [
         href: "https://github.com/apc518/parallel-chess"
     },
     {
-        id: 2,
+        id: 3,
         tech: "C",
         techThumbnailSrc: "/assets/images/c-icon.svg",
         title: "UPS Shell",
@@ -24,11 +32,19 @@ export const projects = [
         href: "https://github.com/apc518/ups-shell"
     },
     {
-        id: 3,
-        tech: "JavaScript",
+        id: 4,
+        tech: "Python",
+        techThumbnailSrc: "/assets/images/python-icon.svg",
+        title: "Realisr",
+        description: "A sound design tool based on a concept of 2-dimensional time signatures that I've explored over the past few years.",
+        href: "https://chamberlainmusic.herokuapp.com/realisr"
+    },
+    {
+        id: 5,
+        tech: "Javascript",
         techThumbnailSrc: "/assets/images/javascript-icon.svg",
-        title: "ChamberCode",
-        description: "This site! And many embedded apps such as Flippr, Spookr, and Context Collapse.",
-        href: "https://github.com/apc518/chambercode-front"
+        title: "Context Collapse",
+        description: "A 2D shooter game I made during the summer of 2021, featuring a cat in space shooting minecraft arrows. It also has a live leaderboard!",
+        href: "https://chambercode.com/games/context-collapse"
     }
 ]
