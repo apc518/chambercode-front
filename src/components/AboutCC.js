@@ -13,12 +13,12 @@ const githubLink = "https://github.com/apc518/chambercode-front"
 
 export default function AboutMe(){
     return (
-        <Container style={{paddingTop: 20}}>
+        <Container maxWidth="md" style={{paddingTop: 20}}>
             <Hidden mdUp implementation="css">
                 <br/><br/>
             </Hidden>
 
-            <Typography variant="h3">
+            <Typography variant="h4">
                 Welcome!
             </Typography>
             <hr style={{
@@ -36,7 +36,7 @@ export default function AboutMe(){
                 ChamberCode is an app-hub for several web applications I've built. While each embedded site can be viewed at its own netlify address, this site serves as an easy way for people who use my apps to use them all in one place, and for me to showcase my skills. All with with a simple, memorable domain.
             </Typography><br/>
 
-            <Typography variant="h3">
+            <Typography variant="h4">
                 Technologies
             </Typography>
             <hr style={{

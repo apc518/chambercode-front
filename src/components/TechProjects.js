@@ -17,16 +17,25 @@ export default function TechProjects({projects}){
     const classes = useStyles();
 
     return (
-        <Grid container alignContent="center">
+        <Grid container>
             {projects.map(project => (
-                <Grid item key={project.id} xs={12} sm={6}>
+                <Grid 
+                    item 
+                    key={project.id}
+                    xs={12}
+                    sm={6}
+                    style={{
+                        display: "flex",
+                        justifyContent: "center"
+                    }}
+                >
                     <Card 
                         elevation={0}
                         style={{
-                            background: project.id % 2 === 0 ? "#043" : "#034",
+                            background: project.id % 2 === 0 ? "#004035" : "#00353e",
                             color: "white",
                             width: 300,
-                            marginTop: 20
+                            marginTop: 20,
                         }}
                     >
                         <CardHeader title={project.title}>

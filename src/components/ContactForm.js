@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 
 import {validate} from 'email-validator';
 
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import SendIcon from '@material-ui/icons/Send';
@@ -23,10 +22,6 @@ const useStyles = makeStyles({
     display: 'block'
   },
   text: {
-    color: 'white'
-  },
-  pageTitle: {
-    marginTop: 20,
     color: 'white'
   }
 });
@@ -135,17 +130,6 @@ export default function ContactForm() {
 
   return (
     <Container maxWidth="md">
-      <Typography
-        variant="h5"
-        color="textPrimary"
-        component="h2"
-        gutterBottom
-        align="left"
-        className={classes.pageTitle}
-      >
-        Contact Me
-      </Typography>
-
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         {fields.map(field=>(
           <CssTextField
