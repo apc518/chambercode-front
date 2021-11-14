@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import {Container, Typography, Hidden, CircularProgress} from '@material-ui/core';
+import {Container, Typography, Hidden, CircularProgress, Icon } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import TechProjects from './TechProjects';
@@ -10,6 +10,8 @@ import ContactForm from './ContactForm';
 const youtubeLink = "https://www.youtube.com/andychamberlainmusic";
 const realisrVideo = "https://www.youtube.com/watch?v=2b8rnIcBCTc";
 const githubLink = "https://github.com/apc518";
+const devtoLink = "https://dev.to/apc518";
+const linkedinLink = "https://www.linkedin.com/in/andy-chamberlain-875879214/";
 const urlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com" : "http://localhost:5000";
 
 export default function AboutMe(){
@@ -63,7 +65,7 @@ export default function AboutMe(){
                     marginTop: 20
                 }}
             >
-                Projects
+                My Projects
             </Typography>
 
             <TechProjects projects={projects}/>
@@ -89,8 +91,48 @@ export default function AboutMe(){
             <ContactForm />
 
             <footer style={{marginTop: "auto", padding:"2em"}}>
-            <Typography align="center" variant="h5" style={{lineHeight: 1.2}}>
-                <a href={githubLink} target="_blank" rel="noreferrer">My Github</a> <GitHubIcon />
+            <Typography
+                align="center"
+                variant="h4"
+                style={{
+                    lineHeight: 1.3
+                }}
+            >
+                <a href={githubLink} target="_blank" rel="noreferrer">Github</a>
+                <> </>
+                <GitHubIcon fontSize="inherit" /><br/>
+
+                <a href={devtoLink} target="_blank" rel="noreferrer">Dev.to</a>
+                <> </>
+                <Icon
+                    style={{
+                        display: "inline-block",
+                    }}
+                    fontSize="inherit"
+                >
+                    <img
+                        alt="dev.to logo"
+                        src="/assets/images/devto-icon.svg"
+                        width="35px"
+                        height="45px"
+                    />
+                </Icon><br/>
+
+                <a href={linkedinLink} target="_blank" rel="noreferrer">LinkedIn</a>
+                <> </>
+                <Icon
+                    style={{
+                        display: "inline-block",
+                    }}
+                    fontSize="inherit"
+                >
+                    <img
+                        alt="linkedin logo"
+                        src="/assets/images/linkedin-icon.svg"
+                        width="30px"
+                        height="30px"
+                    />
+                </Icon>
             </Typography>
             </footer>
         </Container>
