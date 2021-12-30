@@ -10,10 +10,20 @@ export const apps = {
             thumbnail: null,
             mobileEnabled: true,
             needsForeheadOnMobile: false,
-            id: 0
         }
     ],
     music: [
+        {
+            title: "Realisr 2",
+            name: "realisr2",
+            description: "Complete reboot of Realisr, with way more features and performance!",
+            path: "/music/realisr2",
+            url: "https://realisr2.netlify.app",
+            category: "music",
+            thumbnail: "/assets/images/realisr2-thumbnail.png",
+            mobileEnabled: true,
+            needsForeheadMdDown: true
+        },
         {
             title: "Flippr",
             name: "flippr",
@@ -24,7 +34,6 @@ export const apps = {
             thumbnail: "/assets/images/flippr_thumbnail.png",
             mobileEnabled: true,
             needsForeheadMdDown: false,
-            id: 0
         },
         {
             title: "Spookr",
@@ -36,7 +45,6 @@ export const apps = {
             thumbnail: "/assets/images/spookr_thumbnail.png",
             mobileEnabled: true,
             needsForeheadMdDown: false,
-            id: 1
         }
     ],
     games: [
@@ -50,7 +58,6 @@ export const apps = {
             thumbnail: "/assets/images/context_collapse_thumbnail.png",
             mobileEnabled: false,
             needsForeheadMdDown: true,
-            id: 0
         },
         {
             title: "Matheroids",
@@ -62,7 +69,6 @@ export const apps = {
             thumbnail: "/assets/images/matheroids_thumbnail.png",
             mobileEnabled: true,
             needsForeheadMdDown: true,
-            id: 1
         }
     ],
     math: [
@@ -76,7 +82,6 @@ export const apps = {
             thumbnail: "/assets/images/latex-matrix-thumbnail.png",
             mobileEnabled: true,
             needsForeheadMdDown: true,
-            id: 0
         }
     ]
 }   
