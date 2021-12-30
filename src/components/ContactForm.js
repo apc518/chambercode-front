@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {validate} from 'email-validator';
+import { validate } from 'email-validator';
 
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -8,12 +8,12 @@ import SendIcon from '@material-ui/icons/Send';
 import { makeStyles, withStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 
+import { apiUrlBase } from '../objects/util';
+
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
-
-const urlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com" : "http://localhost:5000";
 
 const useStyles = makeStyles({
   field: {
@@ -55,21 +55,18 @@ export default function ContactForm() {
 
   const fields = [
     {
-      id: 0,
       name: "Your Email",
       rows: 1,
       func: setEmail,
       error: emailError
     },
     {
-      id: 1,
       name: "Subject",
       rows: 1,
       func: setSubject,
       error: subjectError
     },
     {
-      id: 2,
       name: "Message",
       rows: 6,
       func: setMessageBody,
@@ -87,7 +84,7 @@ export default function ContactForm() {
     setMessageError(!messageBody);
 
     if(validate(email) && subject && messageBody){
-      fetch(`${urlBase}/contact`, {
+      fetch(`${apiUrlBase}/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -131,7 +128,7 @@ export default function ContactForm() {
   return (
     <Container maxWidth="md">
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        {fields.map(field=>(
+        {fields.map((field, idx) => (
           <CssTextField
             onChange={e => field.func(e.target.value)}
             variant="outlined"
@@ -144,7 +141,7 @@ export default function ContactForm() {
             error={field.error}
             multiline={field.rows > 1 ? true : false}
             rows={field.rows}
-            key={field.id}
+            key={idx}
           />
         ))}
         

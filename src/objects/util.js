@@ -1,0 +1,1 @@
+export const apiUrlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com" : `http://${window.location.hostname}:5000`;

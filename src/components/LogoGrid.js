@@ -13,15 +13,15 @@ const useStyles = makeStyles({
     }
 });
 
-export default function LogoGrid({logos, itemSize}){
+export default function LogoGrid({ logos, itemSize }){
     const classes = useStyles();
 
     if(!itemSize) itemSize = 100;
 
     return (
         <Grid container>
-            {logos.map(logo => (
-            <Grid item key={logo.id} xs={6} md={3}>  
+            {logos.map((logo, idx) => (
+            <Grid item key={idx} xs={6} md={3}>  
                 <Card
                     style={{
                         width: itemSize,

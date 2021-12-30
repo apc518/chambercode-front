@@ -86,9 +86,9 @@ export default function TestDrawer({mobileOpen, handleDrawerToggle}){
       <Avatar src="/assets/images/powerup-1.png" className={classes.logo}/>
 
       <List>
-      {menuItems.map(item => (
+      {menuItems.map((item, idx) => (
           <ListItem 
-          key={item.id}
+          key={idx}
           button
           onClick={() => {
             history.push(item.path);
