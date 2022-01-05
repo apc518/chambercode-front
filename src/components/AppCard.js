@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { makeStyles, createStyles, CardContent } from '@material-ui/core';
+import { makeStyles, createStyles, CardContent, Typography } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -14,15 +14,16 @@ const useStyles = makeStyles(() =>
       '&:hover': {
         transform: 'scale(1.04) rotate(1.0deg)',
         border: '4px solid #fff'
-      }
+      },
+      width: '32rem'
     },
     media: {
-      height: '75vh'
+      height: '65vh'
     },
     cardText: {
       backgroundColor: "#444",
       color: "#ddd",
-      fontSize: 24,
+      fontSize: 20,
       fontFamily: "Trebuchet MS"
     }
   })
@@ -48,6 +49,9 @@ export default function AppCard({app}){
             <CardContent
               className={classes.cardText}
             >
+              <Typography gutterBottom variant="h4" component="h2">
+                {app.title}
+              </Typography>
               {app.description}
             </CardContent>
         </CardActionArea>
