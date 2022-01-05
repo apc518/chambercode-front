@@ -15,7 +15,7 @@ const useStyles = makeStyles(() =>
         transform: 'scale(1.04) rotate(1.0deg)',
         border: '4px solid #fff'
       },
-      width: '32rem'
+      maxWidth: '32rem'
     },
     media: {
       height: '65vh'
