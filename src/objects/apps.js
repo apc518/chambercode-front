@@ -16,7 +16,7 @@ export const apps = {
         {
             title: "PolyShapr",
             name: "polyshapr",
-            description: "Massive, mesmerizing,   polyrhythms displayed through recursive polygons",
+            description: "Massive, mesmerizing, multicolored polyrhythms animated with recursive polygons",
             path: "/music/polyshapr",
             url: "https://polyshapr.netlify.app",
             category: "music",
