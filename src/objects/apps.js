@@ -14,9 +14,20 @@ export const apps = {
     ],
     music: [
         {
+            title: "PolyShapr",
+            name: "polyshapr",
+            description: "Massive, mesmerizing,   polyrhythms displayed through recursive polygons",
+            path: "/music/polyshapr",
+            url: "https://polyshapr.netlify.app",
+            category: "music",
+            thumbnail: "/assets/images/polyshapr-thumbnail.png",
+            mobileEnabled: true,
+            needsForeheadMdDown: true
+        },
+        {
             title: "Realisr 2",
             name: "realisr2",
-            description: "Complete reboot of Realisr, with way more features and performance!",
+            description: "Bringing 2-dimensional time to earthlings since 2021 + 0i",
             path: "/music/realisr2",
             url: "https://realisr2.netlify.app",
             category: "music",
@@ -31,7 +42,7 @@ export const apps = {
             path: "/music/flippr",
             url: "https://flippr.netlify.app",
             category: "music",
-            thumbnail: "/assets/images/flippr_thumbnail.png",
+            thumbnail: "/assets/images/flippr-thumbnail.png",
             mobileEnabled: true,
             needsForeheadMdDown: false,
         },
@@ -42,7 +53,7 @@ export const apps = {
             path: "/music/spookr",
             url: "https://spookr.netlify.app",
             category: "music",
-            thumbnail: "/assets/images/spookr_thumbnail.png",
+            thumbnail: "/assets/images/spookr-thumbnail.png",
             mobileEnabled: true,
             needsForeheadMdDown: false,
         }
@@ -55,7 +66,7 @@ export const apps = {
             path: "/games/context-collapse",
             url: "https://context-collapse.netlify.app",
             category: "games",
-            thumbnail: "/assets/images/context_collapse_thumbnail.png",
+            thumbnail: "/assets/images/context-collapse-thumbnail.png",
             mobileEnabled: false,
             needsForeheadMdDown: true,
         },
@@ -66,7 +77,7 @@ export const apps = {
             path: "/games/matheroids",
             url: "https://matheroids.netlify.app",
             category: "games",
-            thumbnail: "/assets/images/matheroids_thumbnail.png",
+            thumbnail: "/assets/images/matheroids-thumbnail.png",
             mobileEnabled: true,
             needsForeheadMdDown: true,
         }
