@@ -48,7 +48,7 @@ export default function MiniApp({ category, name }){
                 ref={miniApp}
                 className={classes.miniAppFrame}
                 title={appid}
-                sandbox="allow-modals allow-forms allow-top-navigation allow-same-origin allow-scripts allow-pointer-lock allow-orientation-lock allow-popups allow-presentation"
+                sandbox="allow-modals allow-forms allow-top-navigation allow-same-origin allow-scripts allow-pointer-lock allow-orientation-lock allow-popups allow-presentation allow-downloads"
                 src={app.url}
                 onLoad={() => setLoading(false)}
             />

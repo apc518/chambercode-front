@@ -37,8 +37,8 @@ export default function About(props){
                 <br/><br/>
             </Hidden>
             <Grid container spacing={6}>
-                {aboutPages.map(ap => (
-                    <Grid item key={ap.id} xs={12} md={6}>
+                {aboutPages.map((ap, idx) => (
+                    <Grid item key={idx} xs={12} md={6}>
                         <Card className={classes.card} style={{background: ap.color}} elevation={0}>
                             <CardActionArea style={{height: 300}} onClick={() => {history.push(ap.path)}}>
                                 <CardContent>

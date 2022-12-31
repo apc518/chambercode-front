@@ -9,7 +9,7 @@ import { makeStyles, Hidden } from '@material-ui/core';
 import '../App.css';
 import AppCard from './AppCard'
 
-import {apps} from '../objects/apps';
+import { apps } from '../objects/apps';
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -32,8 +32,8 @@ export default function AppList({category}) {
           <br/>
       </Hidden>
       <Grid container spacing={6}>
-        {apps[category].map(app => (
-          <Grid item key={app.id} xs={12} md={6}>
+        {apps[category].map((app, idx) => (
+          <Grid item key={idx} xs={12} md={6}>
             {!screenType.isMobile || app.mobileEnabled ? <AppCard app={app}/> : <></>}
           </Grid>
         ))}

@@ -18,10 +18,10 @@ export default function TechProjects({projects}){
 
     return (
         <Grid container>
-            {projects.map(project => (
+            {projects.map((project, idx) => (
                 <Grid 
                     item 
-                    key={project.id}
+                    key={idx}
                     xs={12}
                     sm={6}
                     style={{
@@ -32,7 +32,7 @@ export default function TechProjects({projects}){
                     <Card 
                         elevation={0}
                         style={{
-                            background: project.id % 2 === 0 ? "#004035" : "#00353e",
+                            background: idx % 2 === 0 ? "#004035" : "#00353e",
                             color: "white",
                             width: 300,
                             marginTop: 20,

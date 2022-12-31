@@ -1,24 +1,28 @@
 import React, { useEffect, useState } from 'react';
 
-import {Container, Typography, Hidden, CircularProgress, Icon } from '@material-ui/core';
+import { Container, Typography, Hidden, CircularProgress } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import TechProjects from './TechProjects';
-import {projects} from "../objects/projects";
+import { projects } from "../objects/projects";
 import ContactForm from './ContactForm';
+
+import LinkedInIcon from './icons/LinkedInIcon';
+import DevToIcon from './icons/DevToIcon';
+
+import { apiUrlBase } from '../objects/util';
 
 const youtubeLink = "https://www.youtube.com/andychamberlainmusic";
 const realisrVideo = "https://www.youtube.com/watch?v=2b8rnIcBCTc";
 const githubLink = "https://github.com/apc518";
 const devtoLink = "https://dev.to/apc518";
 const linkedinLink = "https://www.linkedin.com/in/andy-chamberlain-875879214/";
-const urlBase = process.env.NODE_ENV === "production" ? "https://chambercode-back.herokuapp.com" : "http://localhost:5000";
 
 export default function AboutMe(){
     const [subs, setSubs] = useState(<CircularProgress size="1.2rem"/>);
     
     useEffect(() => {
-        fetch(`${urlBase}/youtubestats/andy`)
+        fetch(`${apiUrlBase}/youtubestats/andy`)
             .then((res) => {
                 res.json().then(data => {
                     let subCount = data.items[0].statistics.subscriberCount;
@@ -93,46 +97,16 @@ export default function AboutMe(){
             <footer style={{marginTop: "auto", padding:"2em"}}>
             <Typography
                 align="center"
-                variant="h4"
+                variant="h5"
                 style={{
                     lineHeight: 1.3
                 }}
             >
-                <a href={githubLink} target="_blank" rel="noreferrer">Github</a>
-                <> </>
-                <GitHubIcon fontSize="inherit" /><br/>
+                <a href={githubLink} target="_blank" rel="noreferrer">Github</a> <GitHubIcon style={{  }} /><br/>
 
-                <a href={devtoLink} target="_blank" rel="noreferrer">Dev.to</a>
-                <> </>
-                <Icon
-                    style={{
-                        display: "inline-block",
-                    }}
-                    fontSize="inherit"
-                >
-                    <img
-                        alt="dev.to logo"
-                        src="/assets/images/devto-icon.svg"
-                        width="35px"
-                        height="45px"
-                    />
-                </Icon><br/>
+                <a href={devtoLink} target="_blank" rel="noreferrer">Dev.to</a> <DevToIcon /><br/>
 
-                <a href={linkedinLink} target="_blank" rel="noreferrer">LinkedIn</a>
-                <> </>
-                <Icon
-                    style={{
-                        display: "inline-block",
-                    }}
-                    fontSize="inherit"
-                >
-                    <img
-                        alt="linkedin logo"
-                        src="/assets/images/linkedin-icon.svg"
-                        width="30px"
-                        height="30px"
-                    />
-                </Icon>
+                <a href={linkedinLink} target="_blank" rel="noreferrer">LinkedIn</a> <LinkedInIcon />
             </Typography>
             </footer>
         </Container>

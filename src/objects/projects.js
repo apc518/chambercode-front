@@ -1,6 +1,5 @@
 export const projects = [
     {
-        id: 0,
         tech: "Python",
         techThumbnailSrc: "/assets/images/python-icon.svg",
         title: "Profanity Detector",
@@ -8,7 +7,6 @@ export const projects = [
         href: "https://github.com/apc518/pyprofanity"
     },
     {
-        id: 1,
         tech: "Javascript",
         techThumbnailSrc: "/assets/images/javascript-icon.svg",
         title: "Realisr 2",
@@ -16,7 +14,6 @@ export const projects = [
         href: "https://github.com/apc518/realisr-2"
     },
     {
-        id: 2,
         tech: "C#",
         techThumbnailSrc: "/assets/images/c-sharp-icon.svg",
         title: "Chess Engine",
@@ -24,23 +21,27 @@ export const projects = [
         href: "https://github.com/apc518/parallel-chess"
     },
     {
-        id: 3,
+        tech: "Rust",
+        techThumbnailSrc: "/assets/images/rust-lang-icon.svg",
+        title: "Realisr 2",
+        description: "A year-later reboot of my imaginary-time based sound design app Realisr. One of my favorite projects with a surprising amount of history!",
+        href: "https://github.com/apc518/realisr-2"
+    },
+    {
         tech: "C",
         techThumbnailSrc: "/assets/images/c-icon.svg",
         title: "UPS Shell",
         description: "A POSIX-style shell written in C, themed for my university, the University of Puget Sound",
         href: "https://github.com/apc518/ups-shell"
     },
+    // {
+    //     tech: "Python",
+    //     techThumbnailSrc: "/assets/images/python-icon.svg",
+    //     title: "Realisr",
+    //     description: "A sound design tool based on a concept of 2-dimensional time signatures that I've explored over the past few years.",
+    //     href: "https://chamberlainmusic.herokuapp.com/realisr"
+    // },
     {
-        id: 4,
-        tech: "Python",
-        techThumbnailSrc: "/assets/images/python-icon.svg",
-        title: "Realisr",
-        description: "A sound design tool based on a concept of 2-dimensional time signatures that I've explored over the past few years.",
-        href: "https://chamberlainmusic.herokuapp.com/realisr"
-    },
-    {
-        id: 5,
         tech: "Javascript",
         techThumbnailSrc: "/assets/images/javascript-icon.svg",
         title: "Context Collapse",
