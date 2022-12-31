@@ -11,9 +11,9 @@ export const projects = [
         id: 1,
         tech: "Javascript",
         techThumbnailSrc: "/assets/images/javascript-icon.svg",
-        title: "ChamberCode",
-        description: "This site! And many embedded apps such as Flippr, Spookr, and Context Collapse.",
-        href: "https://github.com/apc518/chambercode-front"
+        title: "Realisr 2",
+        description: "A sound design app similar in effect to granular synthesis but with an entirely novel interface and theoretical underpinning",
+        href: "https://github.com/apc518/realisr-2"
     },
     {
         id: 2,
