@@ -40,6 +40,9 @@ function App() {
             <Route exact path="/latex-matrix">
               <Redirect from="/latex-matrix" to="/math/latex-matrix" />
             </Route>
+            <Route exact path="/polyshapr">
+              <Redirect from="/polyshapr" to="/music/polyshapr" />
+            </Route>
             
             <Route exact path="/music">
               <AppList category="music"/>
