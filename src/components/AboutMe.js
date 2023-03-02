@@ -30,10 +30,10 @@ export default function AboutMe(){
                 I'm a programmer and musician. I have a <a href={youtubeLink} target="_blank" rel="noreferrer">YouTube channel</a> with a few thousand subscribers that features a lot of music theory and more <a href={realisrVideo} target="_blank" rel="noreferrer">programming</a> than you might expect!<br/>
             </Typography>
 
-            <Typography variant="h6" gutterBottom>Other hobbies of mine include basketball and philosophy 🏀 🤔</Typography>
+            <Typography variant="h6" gutterBottom>Other hobbies of mine include rollerblading and philosophy ⛸ 🤔</Typography>
 
             <Typography variant="h6" style={{lineHeight: 1.2}} gutterBottom>
-                My first ever program was to aid in experimenting with <a href="https://youtu.be/zZZySzJzMLQ" target="_blank" rel="noreferrer">negative harmony.</a> I've since fallen in love with coding and computer science, and am currently in my senior year at the University of Puget Sound where I major in computer science.<br/>
+                My first ever program was to aid in experimenting with <a href="https://youtu.be/zZZySzJzMLQ" target="_blank" rel="noreferrer">negative harmony.</a> I've since fallen in love with coding and computer science, and I'm now working at Nintendo! 🟦⬛⬛🟥<br/>
             </Typography>
 
             <hr style={{

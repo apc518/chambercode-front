@@ -1,14 +1,14 @@
 export const projects = [
     {
-        tech: "Python",
-        techThumbnailSrc: "/assets/images/python-icon.svg",
-        title: "Profanity Detector",
-        description: "A surprisingly capable profanity detector written in pure python. It outperforms most profanity detectors I've seen in production.",
-        href: "https://github.com/apc518/pyprofanity"
-    },
-    {
         tech: "Javascript",
         techThumbnailSrc: "/assets/images/javascript-icon.svg",
+        title: "PolyShapr",
+        description: "A webapp for creating polyrhythm animations, specifically using nested polygons. I went viral on instagram with this one!",
+        href: "https://github.com/apc518/polyshapr"
+    },
+    {
+        tech: "Rust",
+        techThumbnailSrc: "/assets/images/rust-lang-icon.svg",
         title: "Realisr 2",
         description: "A sound design app similar in effect to granular synthesis but with an entirely novel interface and theoretical underpinning",
         href: "https://github.com/apc518/realisr-2"
@@ -21,11 +21,11 @@ export const projects = [
         href: "https://github.com/apc518/parallel-chess"
     },
     {
-        tech: "Rust",
-        techThumbnailSrc: "/assets/images/rust-lang-icon.svg",
-        title: "Realisr 2",
-        description: "A year-later reboot of my imaginary-time based sound design app Realisr. One of my favorite projects with a surprising amount of history!",
-        href: "https://github.com/apc518/realisr-2"
+        tech: "Python",
+        techThumbnailSrc: "/assets/images/python-icon.svg",
+        title: "Profanity Detector",
+        description: "A surprisingly capable profanity detector written in pure python. It outperforms most profanity detectors I've seen in production.",
+        href: "https://github.com/apc518/pyprofanity"
     },
     {
         tech: "C",
