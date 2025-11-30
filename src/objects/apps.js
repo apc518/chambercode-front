@@ -14,6 +14,17 @@ export const apps = {
     ],
     music: [
         {
+            title: "MeTr",
+            name: "metr",
+            description: "Metric Trees to your heart's content",
+            path: "/music/metr",
+            url: "https://metrictrees.netlify.app",
+            category: "music",
+            thumbnail: "/assets/images/metr-thumbnail.png",
+            mobileEnabled: true,
+            needsForeheadMdDown: true
+        },
+        {
             title: "PolyShapr",
             name: "polyshapr",
             description: "Massive, mesmerizing, multicolored polyrhythms animated with recursive polygons",

@@ -18,7 +18,7 @@ const useStyles = makeStyles(() =>
       maxWidth: '32rem'
     },
     media: {
-      height: '65vh'
+      height: '25vh'
     },
     cardText: {
       backgroundColor: "#444",

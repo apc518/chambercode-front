@@ -43,6 +43,10 @@ function App() {
             <Route exact path="/polyshapr">
               <Redirect from="/polyshapr" to="/music/polyshapr" />
             </Route>
+
+            <Route exact path="/metr">
+              <Redirect from="/metr" to="/music/metr" />
+            </Route>
             
             <Route exact path="/music">
               <AppList category="music"/>
